@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name:     Example Plugin
- * Plugin URI:      https://www.veronalabs.com
- * Plugin Prefix:   EXAMPLE_PLUGIN
- * Description:     Example WordPress Plugin Based on Rabbit Framework!
- * Author:          VeronaLabs
- * Author URI:      https://veronalabs.com
- * Text Domain:     example-plugin
+ * Plugin Name:     Mahdi Zamani
+ * Plugin URI:      https://github.com/mhdizmni/veronalabs-plugin
+ * Plugin Prefix:   MAHDI
+ * Description:     Mahdi Zamani's Assignment!
+ * Author:          Mahdi Zamani
+ * Author URI:      https://github.com/mhdizmni/
+ * Text Domain:     mahdi
  * Domain Path:     /languages
  * Version:         1.0
  */
