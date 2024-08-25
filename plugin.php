@@ -1,22 +1,25 @@
 <?php
 /**
- * Plugin Name:     Mahdi Zamani
- * Plugin URI:      https://github.com/mhdizmni/veronalabs-plugin
- * Plugin Prefix:   MAHDI
+ * Plugin Name:     Mahdi Zamani's Books Plugin
+ * Plugin URI:      https://github.com/mhdizmni/veronalabs-books-plugin
+ * Plugin Prefix:   BOOKS_PLUGIN
  * Description:     Mahdi Zamani's Assignment!
  * Author:          Mahdi Zamani
  * Author URI:      https://github.com/mhdizmni/
- * Text Domain:     mahdi
+ * Text Domain:     books-plugin
  * Domain Path:     /languages
  * Version:         1.0
  */
 
+use BooksPlugin\PostTypes;
+use BooksPlugin\DataTable;
+use BooksPlugin\Database;
 use Rabbit\Application;
-use Rabbit\Redirects\RedirectServiceProvider;
 use Rabbit\Database\DatabaseServiceProvider;
 use Rabbit\Logger\LoggerServiceProvider;
 use Rabbit\Plugin;
 use Rabbit\Redirects\AdminNotice;
+use Rabbit\Redirects\RedirectServiceProvider;
 use Rabbit\Templates\TemplatesServiceProvider;
 use Rabbit\Utils\Singleton;
 use League\Container\Container;
@@ -26,10 +29,10 @@ if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
 }
 
 /**
- * Class ExamplePluginInit
- * @package ExamplePluginInit
+ * Class BooksPluginInit
+ * @package BooksPluginInit
  */
-class ExamplePluginInit extends Singleton
+class BooksPluginInit extends Singleton
 {
     /**
      * @var Container
@@ -37,7 +40,7 @@ class ExamplePluginInit extends Singleton
     private $application;
 
     /**
-     * ExamplePluginInit constructor.
+     * BooksPluginInit constructor.
      */
     public function __construct()
     {
@@ -45,7 +48,7 @@ class ExamplePluginInit extends Singleton
         $this->init();
     }
 
-    public function init()
+    public function init(): void
     {
         try {
 
@@ -58,12 +61,11 @@ class ExamplePluginInit extends Singleton
             $this->application->addServiceProvider(LoggerServiceProvider::class);
             // Load your own service providers here...
 
-
             /**
              * Activation hooks
              */
             $this->application->onActivation(function () {
-                // Create tables or something else
+                Database::create_tables();
             });
 
             /**
@@ -79,7 +81,18 @@ class ExamplePluginInit extends Singleton
                 // load template
                 $this->application->template('plugin-template.php', ['foo' => 'bar']);
 
-                ///...
+                new PostTypes();
+                DataTable::renderTable();
+
+                add_filter('manage_edit-book_columns', 'books_plugin_edit_book_columns');
+                function books_plugin_edit_book_columns($columns)
+                {
+                    // Remove the 'author' column in books page (not books-list page)
+                    unset($columns['author']);
+
+                    return $columns;
+                }
+
 
             });
 
@@ -114,11 +127,11 @@ class ExamplePluginInit extends Singleton
 /**
  * Returns the main instance of ExamplePluginInit.
  *
- * @return ExamplePluginInit
+ * @return Singleton
  */
-function examplePlugin()
+function bookInfoPlugin(): Singleton
 {
-    return ExamplePluginInit::get();
+    return BooksPluginInit::get();
 }
 
-examplePlugin();
+bookInfoPlugin();
