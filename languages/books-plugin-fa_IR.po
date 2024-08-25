@@ -1,0 +1,223 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mahdi Zamani\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-25 21:58+0000\n"
+"PO-Revision-Date: 2024-08-25 22:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: فارسی\n"
+"Language: fa-IR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.1\n"
+"X-Domain: books-plugin"
+"X-Description: I used chatgpt to translate the string to speed up the process, anyways, the translated strings don't seem very vital for a test project"
+
+#: src/PostTypes.php:94
+msgid "Add New Author"
+msgstr "نویسنده جدید اضافه کنید"
+
+#: src/PostTypes.php:26
+msgid "Add New Book"
+msgstr "کتاب جدید اضافه کنید"
+
+#: src/PostTypes.php:24
+msgctxt "add new on admin bar"
+msgid "Book"
+msgstr "کتاب"
+
+#: src/PostTypes.php:73
+msgid "Add New Publisher"
+msgstr "ناشر جدید اضافه کنید"
+
+#: src/PostTypes.php:23
+msgctxt "admin menu"
+msgid "Books"
+msgstr "کتاب‌ها"
+
+#: src/PostTypes.php:89
+msgid "All Authors"
+msgstr "تمام نویسندگان"
+
+#: src/PostTypes.php:30
+msgid "All Books"
+msgstr "تمام کتاب‌ها"
+
+#: src/PostTypes.php:68
+msgid "All Publishers"
+msgstr "تمام ناشران"
+
+#: src/DataTable.php:86 src/PostTypes.php:96
+msgid "Authors"
+msgstr "نویسندگان"
+
+#: src/PostTypes.php:25
+msgctxt "book"
+msgid "Add New"
+msgstr "افزودن جدید"
+
+#: src/DataTable.php:34
+msgid "Books Information"
+msgstr "اطلاعات کتاب‌ها"
+
+#: src/DataTable.php:27 src/DataTable.php:28
+msgid "Books List"
+msgstr "لیست کتاب‌ها"
+
+#: src/DataTable.php:129 src/DataTable.php:227
+msgid "Delete"
+msgstr "حذف"
+
+#: src/DataTable.php:134
+msgid "Draft"
+msgstr "پیش‌نویس"
+
+#: src/DataTable.php:128
+msgid "Edit"
+msgstr "ویرایش"
+
+#: src/PostTypes.php:92
+msgid "Edit Author"
+msgstr "ویرایش نویسنده"
+
+#: src/PostTypes.php:28
+msgid "Edit Book"
+msgstr "ویرایش کتاب"
+
+#: src/PostTypes.php:71
+msgid "Edit Publisher"
+msgstr "ویرایش ناشر"
+
+#. Author URI of the plugin
+msgid "https://github.com/mhdizmni/"
+msgstr "https://github.com/mhdizmni/"
+
+#. URI of the plugin
+msgid "https://github.com/mhdizmni/veronalabs-plugin"
+msgstr "https://github.com/mhdizmni/veronalabs-plugin"
+
+#: src/DataTable.php:85 src/PostTypes.php:109
+msgid "ISBN"
+msgstr "شابک"
+
+#: src/PostTypes.php:124
+msgid "ISBN Number:"
+msgstr "شماره شابک:"
+
+#. Name of the plugin
+#. Author of the plugin
+msgid "Mahdi Zamani"
+msgstr "مهدی زمانی"
+
+#. Description of the plugin
+msgid "Mahdi Zamani's Assignment!"
+msgstr "وظیفه مهدی زمانی!"
+
+#: src/PostTypes.php:95
+msgid "New Author Name"
+msgstr "نام نویسنده جدید"
+
+#: src/PostTypes.php:27
+msgid "New Book"
+msgstr "کتاب جدید"
+
+#: src/PostTypes.php:74
+msgid "New Publisher Name"
+msgstr "نام ناشر جدید"
+
+#: src/PostTypes.php:34
+msgid "No books found in Trash."
+msgstr "هیچ کتابی در سطل زباله یافت نشد."
+
+#: src/PostTypes.php:33
+msgid "No books found."
+msgstr "هیچ کتابی یافت نشد."
+
+#: src/PostTypes.php:90
+msgid "Parent Author"
+msgstr "نویسنده والد"
+
+#: src/PostTypes.php:91
+msgid "Parent Author:"
+msgstr "نویسنده والد:"
+
+#: src/PostTypes.php:32
+msgid "Parent Books:"
+msgstr "کتاب‌های والد:"
+
+#: src/PostTypes.php:69
+msgid "Parent Publisher"
+msgstr "ناشر والد"
+
+#: src/PostTypes.php:70
+msgid "Parent Publisher:"
+msgstr "ناشر والد:"
+
+#: src/PostTypes.php:21
+msgctxt "post type general name"
+msgid "Books"
+msgstr "کتاب‌ها"
+
+#: src/PostTypes.php:22
+msgctxt "post type singular name"
+msgid "Book"
+msgstr "کتاب"
+
+#: src/DataTable.php:87
+msgid "Publisher"
+msgstr "ناشر"
+
+#: src/PostTypes.php:75
+msgid "Publishers"
+msgstr "ناشران"
+
+#: src/PostTypes.php:88
+msgid "Search Authors"
+msgstr "جستجو در نویسندگان"
+
+#: src/PostTypes.php:31
+msgid "Search Books"
+msgstr "جستجو در کتاب‌ها"
+
+#: src/PostTypes.php:67
+msgid "Search Publishers"
+msgstr "جستجو در ناشران"
+
+#: src/PostTypes.php:86
+msgctxt "taxonomy general name"
+msgid "Authors"
+msgstr "نویسندگان"
+
+#: src/PostTypes.php:65
+msgctxt "taxonomy general name"
+msgid "Publishers"
+msgstr "ناشران"
+
+#: src/PostTypes.php:87
+msgctxt "taxonomy singular name"
+msgid "Author"
+msgstr "نویسنده"
+
+#: src/PostTypes.php:66
+msgctxt "taxonomy singular name"
+msgid "Publisher"
+msgstr "ناشر"
+
+#: src/DataTable.php:84
+msgid "Title"
+msgstr "عنوان"
+
+#: src/PostTypes.php:93
+msgid "Update Author"
+msgstr "به‌روزرسانی نویسنده"
+
+#: src/PostTypes.php:72
+msgid "Update Publisher"
+msgstr "به‌روزرسانی ناشر"
+
+#: src/PostTypes.php:29
+msgid "View Book"
+msgstr "مشاهده کتاب"
