@@ -32,6 +32,17 @@ class DataTable extends WP_List_Table
                     ?>
                     <div class="wrap">
                         <h1 class="wp-heading-inline"><?php _e('Books Information', 'books-plugin'); ?></h1>
+                        <p>
+                            Note: showing only the books_info table would not be very informative for admins, therefore, I combined the data from books_info and books.
+                            <br />
+                            * Reasons:
+                            <br />
+                            I decided to go with this approach to delete ISBN record if the admin decides to empty it for any book.
+                            <br />
+                            This would cause the books without ISBN not to be shown on the list.
+                            <br />
+                            Now, we can show books that have no ISBN as well.
+                        </p>
                         <form id="books-table-form" method="post">
                             <?php
                             $table->prepare_items();
@@ -200,6 +211,12 @@ class DataTable extends WP_List_Table
         global $wpdb;
         $table_name = $wpdb->prefix . 'books_info';
         $posts_table = $wpdb->prefix . 'posts';
+
+        /**
+         * Note: showing only the books_info is not very informative for admins, therefore, I combined the data from books_info and books.
+         * Reasons for this approach: as yo can see in \PostTypes\save_isbn_meta function, we delete ISBN record if the updated book has no value for ISBN.
+         * This would cause the books with no isbn not to be shown on the list. with this approach, we can show books that have ISBN as well.
+         */
 
         $sql = "
             SELECT p.ID AS post_id, COALESCE(bi.isbn, '') AS isbn
